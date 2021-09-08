@@ -1,5 +1,15 @@
 #!/usr/bin/env groovy
 
+/*
+Pipeline usage:
+stage ('Check logs') {
+	steps {
+		println "Checking logs..."
+		filterLogs('WARNING', 2)
+	}
+}
+*/
+
 import org.apache.commons.lang.StringUtils
 
 def call(String filter_string, int occurrence) {
